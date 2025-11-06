@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { TextField, Button, Box, Typography, Alert, CircularProgress, Container, AppBar, Toolbar, Link, Divider, IconButton } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
+import Image from 'next/image';
 
 const NextImage = ({ src, alt, style }) => {
   // Styles applied to simulate next/image's 'fill' and 'cover' behavior
@@ -81,7 +82,14 @@ export default function Home() {
   return (
     <>
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color="primary" enableColorOnDark>
+      <AppBar 
+        position="static" 
+        enableColorOnDark
+        sx={{ 
+              backgroundColor: '#4d9fd7', 
+              color: '#ffffff'
+        }}
+      >
         <Toolbar>
           <Typography
             variant="h5"
@@ -90,12 +98,12 @@ export default function Home() {
               flexGrow: 1, 
               fontWeight: 'bold', 
               letterSpacing: 1,
-              textTransform: 'uppercase' 
+              textTransform: 'uppercase', 
+              backgroundColor: '#4d9fd7', 
+              color: '#ffffff'
             }}
           >
-            <h4>
-              The Pull List Curator
-            </h4>
+            <Image src='/IMG_5948.PNG' alt='Pull List Curator Logo' width={1000} height={1000} style={{ width: '30%', height: 'auto', maxWidth: '125px' }}/>
           </Typography>
         </Toolbar>
       </AppBar>
@@ -111,11 +119,15 @@ export default function Home() {
       >
       <br></br>
       <br></br>
-      <h2>Welcome to your comic book shop's newest marketing feature: personalized comic book recommendations every week.</h2>
-      <br></br>
-      <h3>Based on what your customer has purchased, we have developed an algorithm to make personalized recommendations for your customers, introducing them to new comic books every week, boosting your sales and pre-orders.</h3>
       <br></br>
       <br></br>
+      <h2>Welcome to your comic book shop's newest marketing feature: personalized comic book recommendations every week!</h2>
+      <br></br>
+      <h2>Thanks to our new algorithm, we will take the data of your customer purchases and deliver your customers recommendations of the best new comic books delivered right to their inbox, boosting your sales and pre-orders.</h2>
+      <br></br>
+      <br></br>
+      <br></br>
+      <h3>Here's an example of what would be emailed to your customers on a regular basis:</h3>
       <br></br>
       <br></br>
       <h2>
@@ -137,7 +149,7 @@ export default function Home() {
             <br></br>
             <p>Sam and Duncan LaMarr love their six-year-old daughter, Penny, more than anything in the whole world. But half a year ago, she was taken by the Cascade, an evil force they barely understand. Now, Sam and Duncan must fight side by side with the magical beings Penny cherished to try and get her back…before she’s gone forever.</p>
             <br></br>
-            <Button sx={{padding: '15px', borderRadius: '30px'}} variant="contained">Link To Your Website</Button>
+            <Button sx={{padding: '15px', borderRadius: '30px', backgroundColor: '#4d9fd7', color: '#ffffff'}} variant="contained">Link To Your Website</Button>
             <br></br>
       </Box>
       <br></br>
@@ -212,11 +224,10 @@ export default function Home() {
       <Button
         type="submit"
         variant="contained"
-        color="primary"
         disabled={loading}
         fullWidth
         size="large"
-        sx={{ height: 50, padding: '15px', borderRadius: '30px' }}
+        sx={{ height: 50, padding: '15px', borderRadius: '30px', backgroundColor: '#4d9fd7', color: '#ffffff' }}
       >
         {loading ? (
           <CircularProgress size={24} color="inherit" />
@@ -234,7 +245,7 @@ export default function Home() {
           width: '100%',
           padding: 3,
           mt: 4,
-          backgroundColor: '#1976d2',
+          backgroundColor: '#4d9fd7',
           color: 'white',
           textAlign: 'center',
           boxShadow: '0 -2px 10px rgba(0, 0, 0, 0.1)',
